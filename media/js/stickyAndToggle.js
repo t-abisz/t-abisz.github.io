@@ -8,9 +8,9 @@ const headerScroll = cacheClass.headerSticky.offsetTop
 window.onscroll = () => sticky();
 function sticky() {
   if(window.pageYOffset > headerScroll) {
-    headerSticky.classList.add('sticky')
+    cacheClass.headerSticky.classList.add('sticky')
     } else {
-      headerSticky.classList.remove('sticky')
+      cacheClass.headerSticky.classList.remove('sticky')
       }
 }
 //open/close menu
@@ -20,4 +20,4 @@ cacheClass.openMenu.addEventListener('click', () => {
   cacheClass.openMenu.classList.toggle('open')
   bodyToggle.classList.toggle('overflow')
   iconToggle.classList.toggle('height')
-}
+})
