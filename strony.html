@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+	
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<script src="media/js/jquery-1.11.1.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,900&amp;subset=latin-ext" rel="stylesheet">
+		<link rel="stylesheet" href="media/css/style.css">
+		<title>Strony www</title>
+		<link rel="shortcut icon" href="favicon.ico">
+	</head>
+	
+	<body>
+<div class="container">
+			
+<!--header z menu-->
+
+<div class="header">
+	<nav class="nav">
+		<div class="nav__logo">
+			<a href="index.html">
+				<img src="media/images/logo-black.svg" alt="">
+			</a>
+		</div>
+		<div class="nav__icon">
+			<div class="nav__iconContainer">
+				<div class="nav__iconItem"></div>
+				<div class="nav__iconItem"></div>
+				<div class="nav__iconItem"></div>
+				<div class="nav__iconItem"></div>
+			</div>
+		</div>
+		<div class="navOpen">
+			<div class="navOpen__item navOpen__item--centerFixed">
+				<a class="navOpen__link" href="system_TRB.pdf">System TRB</a>
+			</div>
+			<div class="navContainer">
+				<div class="navContainer__item">
+					<a class="navOpen__link" href="loga.html">Logo/Logotypy</a>
+				</div>
+				<div class="navContainer__item">
+					<a class="navOpen__link" href="wizualizacje.html">Wizualizacje</a>
+				</div>
+				<div class="navContainer__item">
+					<a class="navOpen__link" href="krzywe.html">Prace na krzywych</a>
+				</div>
+				<div class="navContainer__item">
+					<a class="navOpen__link" href="strony.html">Strony WWW</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+</div>
+
+<!--header z menu-->
+	<section>
+		<div class="wrapper">
+			<div class="category">
+				<div class="box__img">
+					<img src="media/images/strony-przyklad.png" alt="">
+				</div>
+			</div>		
+		</div>
+	</section>
+			
+	<footer class="footer">
+				<div class="footer__contact">
+						<div class="footer__adress">
+							<p>Paweł Tabisz</p>
+							<p>05-300 Mińsk Mazowiecki</p>
+							<p>ul. 1PLM 2/6</p>
+						</div>
+						<div class="contact">
+							<p><a href="mailto:tabiszpawel@gmail.com">tabiszpawel@gmail.com</a></p>
+							<p><a href="tel:784701518">784 701 518</a></p>
+							<p><a href="link">behance</a></p>
+						</div>
+				</div>
+			</footer>
+		</div>
+		<script>
+$(document).ready(function(){
+    $(".nav__icon").click(function(){
+		$("body").toggleClass('overflow');
+        $(".navOpen").toggleClass('height');
+		$(this).toggleClass('open');
+    });
+});
+$(window).scroll(function(){
+  var sticky = $('.header'),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= 100) sticky.addClass('sticky');
+  else sticky.removeClass('sticky');
+});
+</script>
+	</body>
+	
+</html>
