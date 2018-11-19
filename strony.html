@@ -7,7 +7,6 @@
 		<meta name="HandheldFriendly" content="true">
 		<meta name="description" content="">
 		<meta name="keywords" content="">
-		<script src="media/js/jquery-1.11.1.min.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,900&amp;subset=latin-ext" rel="stylesheet">
 		<link rel="stylesheet" href="media/css/style.css">
 		<title>Strony www</title>
@@ -82,22 +81,7 @@
 				</div>
 			</footer>
 		</div>
-		<script>
-$(document).ready(function(){
-    $(".nav__icon").click(function(){
-		$("body").toggleClass('overflow');
-        $(".navOpen").toggleClass('height');
-		$(this).toggleClass('open');
-    });
-});
-$(window).scroll(function(){
-  var sticky = $('.header'),
-      scroll = $(window).scrollTop();
-
-  if (scroll >= 100) sticky.addClass('sticky');
-  else sticky.removeClass('sticky');
-});
-</script>
+	<script type="text/javascript" src="media/js/stickyAndToggle.js"></script>
 	</body>
 	
 </html>
