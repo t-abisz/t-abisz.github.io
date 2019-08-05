@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+	
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,900&amp;subset=latin-ext" rel="stylesheet">
+	<title>Wizualizacje</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<style> 
+	  body div {
+	    box-sizing: border-box;
+	  }
+	  .block {
+	    display: flex;
+		justify-content: center;
+		padding: 40px;
+	  }
+	  .block__elem {
+	    border: 1px solid #3888ff;
+		border-radius: 5px;
+		padding: 32px 16px;
+	  }
+	  .block__title {
+	    color: black;
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #ff8838;
+		margin-bottom: 16px;
+	  }
+	  .block__title h2 {
+	    font-size: 30px;
+		line-height: 34px;
+		font-family: sans-serif;
+		font-weight: 900;
+		margin: 0;
+	  }
+	  .block__elem {
+	    text-align: center;
+		min-width: 320px;
+		background-image: url(gra_lotto.svg);
+		background-repeat: no-repeat;
+		background-size: 90px;
+	  }
+	  .randomNum {
+	    font-size: 28px;
+		line-height: 56px;
+		color: #ff8838;
+		font-weight: bold;
+		font-family: sans-serif;
+		letter-spacing: 2px;
+		min-height: 56px;
+	  }
+	  .numbers {
+	    width: 280px;
+		background-color: #3888ff;
+		color: #fff;
+		border-radius: 4px;
+		line-height: 28px;
+		font-size: 14px;
+		font-weight: bold;
+		font-family: sans-serif;
+		text-align: center;
+		padding: 8px 0;
+		cursor: pointer;
+		margin: 0;
+		display: inline-block;
+	  }
+	</style>
+</head>
+	
+<body>
+  <div class="title">
+  	<h1>System chybił trafił</h1>
+	<p class="title__description">Nasz sytsem chybił trafił to proste w uzyciu narzędzie do losowania liczb, które pozwolą ci wygrać wielkie kwoty w Lotto! Prosty w obsłudze, szybki i zapewniajacy szersg nie powtarzalnych liczb.</p>
+  </div>
+  <div class="block">
+  	<div class="block__elem">
+	  <div class="block__title"><h2>Duży Lotek</h2></div>
+  		<div class="randomNum"></div>
+  		<p class="numbers">Losuj</p>
+  	</div>
+  </div>
+  <script type="text/javascript" async src="lottoMixer.js"></script>
+</body>
+  
+  
+</html>

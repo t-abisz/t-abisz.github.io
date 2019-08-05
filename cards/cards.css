@@ -1,0 +1,164 @@
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.gameTable {
+  max-width: 545px;
+  margin: 0 auto;
+  height: 100%;
+}
+.card__front,
+.table__element--deck {
+      min-width: 100px;
+    width: auto;
+    height: 160px;
+  border: 1px solid #bfbfbf;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px -2px rgba(10, 10, 10, 0.54);
+  background-color: #fff;
+}
+.table__place {
+  display: flex;
+  justify-content: space-between;
+}
+.card__image {
+  position: relative;
+  height: 100%;
+}
+.card__front {
+  position: absolute;
+  top: 50%;
+  transform: rotate(30deg) translate(-20%, -46%);
+  left: 0;
+  right: 0;
+  width: 100px;
+  margin: auto;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  font-weight: 900;
+}
+.card__front:nth-child(even) {
+  transform: rotate(-46deg) translate(50%, -30%);
+}
+.table__place--battlefield {
+  justify-content: space-between;
+}
+.heart:after {
+  position: absolute;
+  content: '\2665';
+  top: 2px;
+  left: 27px;
+  font-size: 22px;
+  line-height: 24px;
+  color: #ff0000;
+}
+.diamond:after {
+  position: absolute;
+  content: '\2666';
+  top: 2px;
+  left: 27px;
+  font-size: 22px;
+  line-height: 24px;
+  color: #ff0000;
+}
+.spade:after {
+  position: absolute;
+  content: '\2660';
+  top: 2px;
+  left: 27px;
+  font-size: 22px;
+  line-height: 24px;
+  color: #000000;
+}
+.club:after {
+  position: absolute;
+  content: '\2663';
+  top: 2px;
+  left: 27px;
+  font-size: 22px;
+  line-height: 24px;
+  color: #000000;
+}
+.button {
+  border-radius: 4px;
+  color: #9A9A9A;
+  background-color: #fff;
+  border: 1px solid #fff;
+  font-size: 14px;
+  padding: 4px 16px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.67);
+  width: 100%;
+  margin-bottom: 16px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.table__element--deck {
+  background: repeating-radial-gradient(circle, #F5F5F5, #F5F5F5 10px, #BDBDBD 10px, #BDBDBD 20px);
+  background: repeating-linear-gradient(45deg, #F5F5F5, #F5F5F5 10px, #BDBDBD 10px, #BDBDBD 20px);
+}
+.table__element--ui {
+  width: 160px;
+}
+.button--refresh {
+    border: 1px solid #A9071E;
+    color: #a9071e;
+    box-shadow: 0px 0px 3px 0px #a9071e;
+}
+.table__element--score {
+  max-width: 140px;
+}
+.myCards__row input {
+ text-align: right;
+ border: none;
+ max-width: 40px;
+}
+.table__element--cards {
+  width: calc(100% - 140px);
+}
+.aiCards,
+.aiPoints {
+  color: #FACB47;
+}
+.myCards,
+.myPoints {
+  color: #A0D36E;
+}
+.myCards__line label {
+  color: #9a9a9a;
+  font-size: 11px;
+  font-weight: 900;
+}
+.myCards__row:first-child {
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px dashed #ddd;
+}
+.myCards__row span {
+ color: #A0D36E;
+ font-size: 14px;
+ font-weight: 700;
+ margin-bottom: 8px;
+ display: block; 
+}
+.myCards__row--ai span {
+  color: #FACB47;
+}
+.myCards__line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.myCards__row {
+  margin-bottom: 8px;
+}
+.myCards__row--ai {
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+h1 {
+  font-size: 22px;
+  text-align: center;
+  margin: 16px 0;
+  font-weight: 900;
+  color: #A9071E;
+}

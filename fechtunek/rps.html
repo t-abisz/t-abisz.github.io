@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,900&display=swap&subset=latin-ext" rel="stylesheet">
+	<link href="rps.css" rel="stylesheet" />
+    <title>Wizualizacje</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+	<style>
+
+	</style>
+  </head>
+  <body>
+  
+  <!--Board save name-->
+  <div class="registerName">
+  <form action="#" class="registerName__form">
+    <p class="registerName__headline">Wpisz swoje imię <span>nie dłuższe niż 12 znaków</span></p>
+	<div class="registerName__row">
+	  <input type="text" class="registerName__input" maxlength="12" value="">
+	</div>
+	<button type="button"  class="button registerName__save">DALEJ</botton>
+  </form>
+</div>
+
+<!--Game-->
+    <div class="title">
+      <h1>DUEL</h1>
+    </div>
+	
+    <div class="block">
+	  <div class="block__score">
+	    <div class="blockScore">
+		   <span id="yourName"></span>
+	    	<div class="block__point your__point">3</div>
+	    </div>
+		<div class="blockScore">
+		    <span>Skynet</span>
+			<div class="block__point ai__point">3</div>
+		</div>
+	  </div>
+	  
+      <div class="block__elem">
+      	<div class="win">
+	       <div class="win__content">
+	  	     <div class="win__info"></div>
+	       </div>
+	    </div>
+	    <div class="randomNum randomNum--user"></div>
+        <div class="randomNum randomNum--ai"></div>
+        
+      </div>
+	  <div class="block__buttons">
+		  <div class="button button--unik">Unik</div>
+		  <div class="button button--przeciwTempo">Przeciw-tempo</div>
+		  <div class="button button--pistol">Pistol</div>
+		</div>
+    </div>
+
+  <script type="text/javascript" async="" src="rps.js"></script>
+    <script>
+const input = document.querySelector('.registerName__input');
+const btn = document.querySelector('.registerName__save');
+const saveBoard = document.querySelector('.registerName');
+btn.addEventListener('click', saveName)
+
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   saveName();
+  }
+});
+function saveName() {
+	
+	let takeInput = document.querySelector('.registerName__input').value;
+  if (takeInput == null || takeInput == "") {
+    alert("Podaj imię Goju");
+  } else
+	{
+  localStorage.setItem('name', takeInput);
+  saveBoard.classList.add("off");
+  const userName = localStorage.getItem("name");
+  const userName__place = document.querySelector("#yourName");
+  userName__place.innerHTML = `${userName}`;
+  }
+}
+</script>
+  </body>
+</html>

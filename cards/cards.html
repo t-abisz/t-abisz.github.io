@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Cards</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,900&display=swap&subset=latin-ext" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="cards.css">
+    
+</head>
+
+<body>
+ <!--GAME AREA--> 
+  <div class="gameTable">
+  <h1>WAR</h1>
+  <!--npc/other player-->
+    <div class="table__place table__place--opponent">
+      <div class="table__element table__element--deck"></div>
+      <div class="table__element table__element--base"></div>
+    </div>
+    
+  <!--battlefield-->  
+    <div class="table__place table__place--battlefield">
+     
+      <div class="table__element table__element--score">
+        
+        <div class="myCards__row myCards__row--ai">
+        <span>Skynet</span>
+         <div class="myCards__line">
+          <label>Dywizje</label>
+             <input type="text" class="aiCards" value="">
+          </div>
+          <div class="myCards__line">
+            <label>Siła dywizji</label>
+            <input type="text" class="aiPoints" value="">
+          </div>
+        </div>
+        <div class="myCards__row">
+          <span>Moje</span>
+          <div class="myCards__line">
+            <label>Dywizje</label>
+            <input type="text" class="myCards" value="">
+          </div>
+          <div class="myCards__line">
+            <label>Siła dywizji</label>
+            <input type="text" class="myPoints" value="">
+          </div>
+        </div>
+        
+      </div>
+       <div class="table__element table__element--cards">
+        <div class="card__image"></div>
+      </div>
+    </div>
+   
+  <!--player's deck-->
+    <div class="table__place table__place--you">
+      <div class="table__element table__element--deck"></div>
+      <div class="table__element table__element--ui">
+        <button type="button" class="button button--take">przetasuj i rozdaj</button>
+        <button type="button" class="button button--play">zagraj kartę</button>
+        <button type="button" class="button button--refresh">zacznij od nowa</button>
+      </div>
+    </div>
+    
+  </div>
+  <script type="text/javascript" async="" src="cards.js"></script>
+    <script type="text/javascript" async="" src="war.js"></script>
+</body>
+
+</html>
