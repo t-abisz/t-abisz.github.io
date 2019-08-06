@@ -25,6 +25,7 @@ body {
 .kanban__form {
   display: flex;
   align-items: center;
+  margin-bottom: 24px;
 }
 .kanban input {
   border: 1px solid #5B9DD9;
@@ -66,7 +67,7 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 16px;
-  border-left: 4px solid #9a9a9a;
+  border-left: 4px solid #A9071E;
   padding-left: 8px;
   cursor: grab;
 }
@@ -90,9 +91,16 @@ body {
   border: 1px solid #A0D36E;
   color: #A0D36E;
 }
-.kanban__task.done {
+.kanban__done .kanban__task {
   opacity: 0.3;
+  border-left: 4px solid #9A9A9A;
 }
-.kanban__task.done p {
+.kanban__done .kanban__task p {
   text-decoration: line-through;
+}
+.kanban__task:nth-child(n+4) {
+  border-left: 4px solid #FACB47;
+}
+.kanban__task:nth-child(n+7) {
+  border-left: 4px solid #A0D36E;
 }
