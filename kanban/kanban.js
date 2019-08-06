@@ -13,12 +13,13 @@ if(savedList || savedDone) {
 }
 
 //enter key on input
-task.addEventListener('onkeydown', function(event) {
-  if(event.which == 13 || event.keyCode == 13) {
-   event.preventDefault();
+
+function test() {
+  if(event.keyCode == 13) {
+    event.preventDefault();
    newTask();
-} }
-)
+  }
+}
 
 //adding new task
 function newTask() {
