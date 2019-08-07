@@ -17,10 +17,11 @@
   <div class="kanban">
     <h1 class="kanban_title">Your list of tasks</h1>
     <ul class="kanban__list"></ul>
-    <form action="" onSubmit="return false" class="kanban__form">
-      <input type="text" class="kanban__add" value="" placeholder="Add new task...">
+    <div action="" class="kanban__form">
+      <input type="text" class="kanban__add" onkeydown="test()" value="" placeholder="Add new task...">
       <button type="button" class="button button--add">+</button>
-    </form>
+    </div>
+    <div class="kanban__done"></div>
   </div>
   <script type="text/javascript" async="" src="kanban.js"></script>
 </body>

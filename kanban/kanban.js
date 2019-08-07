@@ -2,19 +2,24 @@ const kanbanList = document.querySelector('.kanban__list');
 const kanbanAdd = document.querySelector('.button--add');
 kanbanAdd.addEventListener('click', newTask);
 const task = document.querySelector('.kanban__add');
+const kanbanDone = document.querySelector('.kanban__done');
 
 //get local storage
-function yourTasks() {
- return kanbanList.innerHTML = localStorage.getItem('savedContent');
+const savedList = localStorage.getItem('savedContent');
+const savedDone = localStorage.getItem('savedDone');
+if(savedList || savedDone) {
+  kanbanList.innerHTML = savedList;
+  kanbanDone.innerHTML = savedDone;
 }
-document.addEventListener("DOMContentLoaded", yourTasks)
+
 //enter key on input
-task.addEventListener('onkeydown', function(event) {
-  if(event.which == 13 || event.keyCode == 13) {
-   event.preventDefault();
+
+function test() {
+  if(event.keyCode == 13) {
+    event.preventDefault();
    newTask();
   }
-})
+}
 
 //adding new task
 function newTask() {
@@ -23,21 +28,28 @@ function newTask() {
   } else {
   kanbanList.insertAdjacentHTML('beforeend', `<li class="kanban__task" draggable="true"><p>${task.value}</p><span class="button button--delete" onclick="deleteTask(this)">X</span><span class="button button--done" onclick="doneTask(this)">&#10003;</span></li>`);
   task.value = '';
-  let saveList = kanbanList.innerHTML;
-  localStorage.setItem('savedContent', saveList);
+  localStorage.setItem('savedContent', kanbanList.innerHTML);
   }
 }
 
 //deleting task
-function deleteTask() {
-  const kanbanTask = document.querySelector('.kanban__task');
+function deleteTask(x) {
+  const kanbanTask = x.closest('.kanban__task');
   kanbanTask.remove();
+  localStorage.setItem('savedContent', kanbanList.innerHTML);
 }
 
 //finishing task
-function doneTask() {
-  const kanbanTask = document.querySelector('.kanban__task');
-  kanbanTask.classList.add('done');
-  kanbanTask.parentNode.appendChild(kanbanTask);
+function doneTask(x) {
+  
+  const kanbanTask = x.closest('.kanban__task');
+  kanbanDone.appendChild(kanbanTask);
+  localStorage.setItem('savedContent', kanbanList.innerHTML);
+  localStorage.setItem('savedDone', kanbanDone.innerHTML);
+}
+
+//drag and drop
+if (document.querySelectorAll('.kanban__task') == true) {
+  
 }
 
