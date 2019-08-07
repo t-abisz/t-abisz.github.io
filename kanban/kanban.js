@@ -33,16 +33,16 @@ function newTask() {
 }
 
 //deleting task
-function deleteTask() {
-  const kanbanTask = document.querySelector('.kanban__task');
+function deleteTask(x) {
+  const kanbanTask = x.closest('.kanban__task');
   kanbanTask.remove();
   localStorage.setItem('savedContent', kanbanList.innerHTML);
 }
 
 //finishing task
-function doneTask() {
+function doneTask(x) {
   
-  const kanbanTask = document.querySelector('.kanban__task');
+  const kanbanTask = x.closest('.kanban__task');
   kanbanDone.appendChild(kanbanTask);
   localStorage.setItem('savedContent', kanbanList.innerHTML);
   localStorage.setItem('savedDone', kanbanDone.innerHTML);
